@@ -20,22 +20,20 @@ function sleep(ms) {
 
 function checarnome() {
   nome = document.getElementById('nome-bella').value
-  if (
-    nome == 'Isabella danes' ||
-    nome == 'Isabella Danes' ||
-    nome == 'Isabella Danes '
-  ) {
+  nome = nome.trim()
+  nome = nome.toLowerCase()
+  if (nome == 'isabella danes' || nome == 'bella') {
     alert('Oi meu amorzinhoooooo')
     primeiro_passo()
   } else {
-    alert('Você não é o meu amor, sorry')
+    alert('Você não é quem eu esperava, sorry')
   }
 }
 
 async function relogio_mensagem(texto) {
   let i = 0
   while (i < texto.length) {
-    await sleep(1500)
+    await sleep(3500)
     mensagem = document.getElementById('mensagem')
     mensagem.innerHTML = texto[i]
     i++
@@ -65,7 +63,7 @@ async function terceiropasso(mensagem) {
   mensagem.innerHTML += `<img id="we" src="./images/we2.jpg" alt="" srcset=""/>
   `
   mensagem.innerHTML += [
-    ' <p>Eu te amo, não só como minha namorada. Amo seu jeito de ser, amo seu cuidado com amigos, familiares e até alguns desconhecidos kkkkkkk é doido pensar que existem pessoas que não te valorizam :/</p>'
+    ' <p>Eu te amo, não só como minha namorada. Amo seu jeito de ser, amo seu cuidado com amigos, familiares e até alguns desconhecidos kkkkkkk</p>'
   ]
   await sleep(15000)
 
