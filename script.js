@@ -35,7 +35,7 @@ function checarnome() {
 async function relogio_mensagem(texto) {
   let i = 0
   while (i < texto.length) {
-    await sleep(1000)
+    await sleep(1500)
     mensagem = document.getElementById('mensagem')
     mensagem.innerHTML = texto[i]
     i++
