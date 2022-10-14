@@ -31,13 +31,20 @@ async function primeiro_passo() {
     '“Se você sabe explicar o que sente, não ama, pois o amor foge de todas as,explicações possíveis',
     'Quem sabe no dia do nosso casamento eu consiga citar algumas explicações.'
   ]
+
   primeiro = document.getElementsByClassName('primeiro-hide')[0]
   primeiro.classList.remove('primeiro-hide')
   primeiro.classList.add('primeiro-show')
+  header = document.getElementsByClassName('header-hide')[0]
+  header.classList.remove('header-hide')
+  header.classList.add('header-show')
+  quizz = document.getElementsByClassName('quizz-show')[0]
+  quizz.classList.remove('quizz-show')
+  quizz.classList.add('quizz-hide')
   for (trecho of texto) {
     mensagem = document.getElementById('mensagem')
     mensagem.innerHTML = trecho
-    await sleep(10)
+    await sleep(1000)
   }
   segundopasso()
 }
@@ -93,4 +100,7 @@ async function quartopasso() {
   await sleep(10000)
   alert('Te amo Neném')
   alert('De: Michael')
+  document.getElementById('ola').innerHTML = ''
+  nav = document.getElementsByClassName('logo')[0]
+  nav.innerHTML = 'Te amo neném'
 }

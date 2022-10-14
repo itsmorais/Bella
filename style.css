@@ -33,6 +33,52 @@ body {
   color: --var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
+a{
+  text-decoration: none;
+}
+
+.header-show {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+}
+
+h3#ola{
+  margin-top: 50px;
+}
+nav {
+  display: flex;
+  width: 100%;
+  height: var(--header-height);
+  align-items: center;
+  justify-content: center;
+}
+
+.header-show{
+  display: block;
+}
+.header-hide{
+  display: none;
+}
+
+
+.quizz-show{
+  display: block;
+}
+.quizz-hide{
+  display: none;
+}
+
+
 
 .cards.grid {
   gap: 1.5rem;
