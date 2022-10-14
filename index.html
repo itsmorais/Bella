@@ -16,16 +16,26 @@
     <title>Bella</title>
   </head>
   <body>
-    <div class="container grid">
-      <div class="cards grid">
-        <div class="card grid">
-          <i class="icon-woman-hair"></i>
-          <h3 class="title">Qual seu nome?</h3>
-          <input type="text" name="" id="nome-bella" />
-          <button id="enviar-nome-bella" onclick="checarnome()">Enviar</button>
+    <header class="header-hide">
+      <nav class="container">
+        <p class="logo" href="#">Michael está digitando<span>...</span></p>
+      </nav>
+    </header>
+
+    <section class="quizz-show">
+      <div class="container grid">
+        <div class="cards grid">
+          <div class="card grid">
+            <i class="icon-woman-hair"></i>
+            <h3 class="title">Qual seu nome?</h3>
+            <input type="text" name="" id="nome-bella" />
+            <button id="enviar-nome-bella" onclick="checarnome()">
+              Enviar
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="primeiro-hide">
       <div class="container grid">
@@ -33,9 +43,7 @@
           <div class="card grid">
             <i class="icon-woman-hair"></i>
             <h3 id="ola" class="title">Oi meu amor</h3>
-            <p id="mensagem">
-              Estou passando aqui apenas para dizer que te amo demais
-            </p>
+            <p id="mensagem"></p>
           </div>
         </div>
       </div>

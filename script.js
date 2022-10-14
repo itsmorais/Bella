@@ -14,6 +14,15 @@ function checarnome() {
   }
 }
 
+function alterarLayout() {
+  primeiro = document.getElementsByClassName('primeiro-hide')[0]
+  primeiro.classList.replace('primeiro-hide', 'primeiro-show')
+  header = document.getElementsByClassName('header-hide')[0]
+  header.classList.replace('header-hide', 'header-show')
+  quizz = document.getElementsByClassName('quizz-show')[0]
+  quizz.classList.replace('quizz-show', 'quizz-hide')
+}
+
 async function primeiro_passo() {
   let texto = [
     'Hoje é seu aniversário meu amor.',
@@ -28,16 +37,14 @@ async function primeiro_passo() {
     'ENFIM',
     'Nenhum me serviu de grande ajuda KKKKK :/',
     'Parei com essa busca quando encontrei esse poema de Drumont:',
-    '“Se você sabe explicar o que sente, não ama, pois o amor foge de todas as,explicações possíveis',
+    '“Se você sabe explicar o que sente, não ama, pois o amor foge de todas as explicações possíveis',
     'Quem sabe no dia do nosso casamento eu consiga citar algumas explicações.'
   ]
-  primeiro = document.getElementsByClassName('primeiro-hide')[0]
-  primeiro.classList.remove('primeiro-hide')
-  primeiro.classList.add('primeiro-show')
+  alterarLayout()
   for (trecho of texto) {
     mensagem = document.getElementById('mensagem')
     mensagem.innerHTML = trecho
-    await sleep(4500)
+    await sleep(4000)
   }
   segundopasso()
 }
@@ -78,4 +85,7 @@ async function quartopasso() {
   await sleep(10000)
   alert('Te amo Neném')
   alert('De: Michael')
+  document.getElementById('ola').innerHTML = ''
+  nav = document.getElementsByClassName('logo')[0]
+  nav.innerHTML = 'Te amo neném'
 }
