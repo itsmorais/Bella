@@ -62,7 +62,7 @@ function segundopasso() {
   mensagem = document.getElementById('mensagem')
   mensagem.innerHTML = imagem
   mensagem.innerHTML += texto
-  setTimeout(terceiropasso, 15000)
+  setTimeout(terceiropasso, 17000)
 }
 
 function terceiropasso() {
@@ -82,7 +82,7 @@ async function quartopasso() {
     ' <p>Você é doce, paciente, brincalhona, atrapalhadinha, linda, gostosa, meu ponto de paz, minha princesa <3 Para mim Bella, você é amor.</p> <h3>Bom, feliz aniversário!! Você é a mulher da minha vida!</h3> '
 
   mostrarMensagemTimer(imagem, mensagem)
-  await sleep(10000)
+  await sleep(12000)
   alert('Te amo Neném')
   alert('De: Michael')
   document.getElementById('ola').innerHTML = ''
