@@ -37,15 +37,23 @@ async function primeiro_passo() {
   for (trecho of texto) {
     mensagem = document.getElementById('mensagem')
     mensagem.innerHTML = trecho
-    await sleep(4500)
+    await sleep(10)
   }
   segundopasso()
 }
 
 function mostrarMensagemTimer(imagem, texto) {
   mensagem = document.getElementById('mensagem')
-  mensagem.innerHTML += imagem
-  mensagem.innerHTML += texto
+  //mensagem.innerHTML += imagem
+  //mensagem.innerHTML += texto
+  mensagem.innerHTML += `<div class="container grid">
+  <div class="cards grid">
+    <div class="card grid">
+  ${imagem}
+  ${texto}
+    </div>
+  </div>
+</div>`
 }
 function segundopasso() {
   let imagem = `<img id="we" src="./images/we.jpg" alt="" srcset=""/>
@@ -53,8 +61,15 @@ function segundopasso() {
   let texto =
     ' <p>Isabella Danes, te achei linda desde a primeira vez que te vi e fiquei ainda mais impressionado em como você é gente boa, inteligente e meio bestalhada kkkkkk Lembro de entrar no carro com o Rub, estava desconsertado e desde então ansiava por uma chance de te conhecer melhor... e quando esse dia chegou foi incrível! Me emociono só de pensar. Você me tirou de um lugar frio e vazio, me fez amar de novo.</p>'
   mensagem = document.getElementById('mensagem')
-  mensagem.innerHTML = imagem
-  mensagem.innerHTML += texto
+  //mensagem.innerHTML = imagem
+  mensagem.innerHTML = `<div class="container grid">
+  <div class="cards grid">
+    <div class="card grid">
+    ${imagem}
+  ${texto}
+    </div>
+  </div>
+</div>`
   setTimeout(terceiropasso, 15000)
 }
 
@@ -72,7 +87,7 @@ async function quartopasso() {
   let imagem = `<img id="we" src="./images/we3.jpg" alt="" srcset=""/>
   `
   let mensagem =
-    ' <p>Você é doce, paciente, brincalhona, atrapalhadinha, linda, gostosa, meu ponto de paz, minha princesa <3 Para mim Bella, você é amor.</p> <h3>Bom, feliz aniversário!! Você é a mulher da minha vida!</h3> '
+    ' <p>Você é doce, paciente, brincalhona, atrapalhadinha, linda, gostosa, meu ponto de paz, minha princesa <3 Para mim Bella, você é amor.</p> <br><h3>Bom, feliz aniversário!! Você é a mulher da minha vida!</h3> '
 
   mostrarMensagemTimer(imagem, mensagem)
   await sleep(10000)
